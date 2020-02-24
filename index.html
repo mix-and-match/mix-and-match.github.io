@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<head>
+<title>Mix-and-Match Perturbation</title>
+<meta name="generator" content="Nested http://nestededitor.sourceforge.net/">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    menuSettings: {zoom: "Double-Click", zscale: "300%"},
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+    MathMenu: {showRenderer: false},
+    "HTML-CSS": {
+        availableFonts: ["TeX"],
+        preferredFont: "TeX",
+        imageFont: null
+    }
+  });
+</script>
+<style type="text/css">
+    body { background-color: White; font-family: Helvetica, Futura, "Trebuchet MS", sans-serif; width:900px; margin:0 auto;}
+    h1 { color: black; font-family: Helvetica, Futura, "Trebuchet MS", sans-serif; }
+    p { color: black; font-family: Helvetica, Futura, "Trebuchet MS", sans-serif;}
+</style>
+</head>
+
+
+<div id="header" class="header" align="center">
+<h1>Mix-and-Match Perturbation: A Stochastic Conditioning Scheme for Diverse Human Motion Prediction</h1>
+
+<table style="width:80%">
+  <tr>
+    <td style="text-align:center"><font size="4">Sadegh Aliakbarian<sup>1,2,4</sup></font></td>
+    <td style="text-align:center"><font size="4">Fatemeh Sadat Saleh<sup>2</sup></font></td>
+    <td style="text-align:center"><font size="4">Mathieu Salzmann<sup>3</sup></font></td>
+    <td style="text-align:center"><font size="4">Lars Petersson<sup>1,4</sup></font></td>
+    <td style="text-align:center"><font size="4">Stephen Gould<sup>1,2</sup></font></td>
+    <td style="text-align:center"><font size="4">Amirhossein Habibian<sup>5</sup></font></td>
+
+
+  </tr>
+  <tr>
+    <td></td> 
+    <td style="text-align:center"><sup>1</sup>ANU</td> 
+    <td style="text-align:center"><sup>2</sup>ACRV</td> 
+    <td style="text-align:center"><sup>3</sup>CVLab, EPFL</td> 
+    <td style="text-align:center"><sup>4</sup>Data61, CSIRO</td> 
+    <td style="text-align:center"><sup>5</sup>Qualcomm AI Research</td>
+  </tr>
+</table>
+
+<p>
+  <a href="#" style="font-size: 24px;">[Code]</a>
+  <a href="#" style="font-size: 24px;">[Main paper]</a>
+  <a href="#" style="font-size: 24px;">[Supplementary material]</a>
+  <a href="#" style="font-size: 24px;">[Video]</a> 
+</p>
+
+
+</div>
+
+<div style="text-align: center;">
+<video height="300" playsinline autoplay muted loop>
+  <source src="media/qualitative.mp4" type="video/mp4">
+</video>
+
+
+</div>
+
+<h2>Abstract</h2>
+Human motion prediction, the task of predicting future 3D human poses given a sequence of observed ones, has been mostly treated as a deterministic problem. However, human motion is a stochastic process: Given an observed sequence of poses, multiple future motions are plausible. 
+Existing approaches to modeling this stochasticity typically combine a random noise vector with information about the previous poses. This combination, however, is done in a deterministic manner, which gives the network the flexibility to learn to ignore the random noise.
+Alternatively, in this paper, we propose to stochastically combine the root of variations with previous pose information, so as to force the model to take the noise into account.
+We exploit this idea for motion prediction by incorporating it into a recurrent encoder-decoder network with a conditional variational autoencoder block that learns to exploit the perturbations.
+Our experiments on two large-scale motion prediction datasets demonstrate that our model yields high-quality pose sequences that are much more diverse than those from state-of-the-art stochastic motion prediction techniques.
+<br>
+
+
+<hr class="heavy">
+
+
+<div style="text-align: center;">
+<h2>Supplementary Video</h2>
+<video width="640" controls>
+	<source src="media/supp_video.mp4" type="video/mp4">
+</video>
+</div>
+<hr class="heavy">
+
+
+
+
+<h2 id="bibtex">Cite</h2>
+If you find this work useful in your own research, please consider citing:
+<pre>
+@inproceedings{mix-and-match-perturbation,
+author={Aliakbarian, Mohammad Sadegh and Saleh, Fatemeh Sadat and Salzmann, Mathieu and Petersson, Lars and Gould, Stephen and Habibian, Amirhossein},
+title = {A Stochastic Conditioning Scheme for Diverse Human Motion Prediction},
+booktitle = {Proceedings of the IEEE international conference on computer vision},
+year = {2020}
+}
+</pre>
